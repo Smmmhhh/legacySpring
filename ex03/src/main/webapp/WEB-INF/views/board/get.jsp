@@ -64,6 +64,37 @@
 <!-- /.row -->
 <%@include file="../includes/footer.jsp"%>
 
+<script type = "text/javascript" src = "/resources/js/reply.js"></script>
+
+<script type="text/javascript">
+
+console.log("==================");
+console.log("JS TEST");
+
+var bnoValue = '<c:out value = "${board.bno}"/>';
+
+//for replyService add Test
+/* replyService.add(
+	{reply : "JS TEST", replyer:"tester", bno : bnoValue}
+	,
+	function(result) {
+		alert("Result " + result);
+	}
+);
+
+$(document).ready(function() {
+	console.log(replyService);
+}) */
+
+replyService.getList({bno:bnoValue, page:1}, function(list) {
+	
+	for(var i = 0, len = list.length || 0; i < len; i++) {
+		console.log(list[i]);
+	}
+});
+
+</script>
+
 <script type="text/javascript">
 
 $(document).ready(function() {
