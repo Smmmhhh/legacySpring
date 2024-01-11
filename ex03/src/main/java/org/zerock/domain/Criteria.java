@@ -22,8 +22,8 @@ public class Criteria {
 		this(1, 10);
 	}
 	
-	public Criteria(int pageNum, int amount) {
-		this.pageNum = pageNum;
+	public Criteria(int page, int amount) {
+		this.pageNum = page;
 		this.amount = amount;		
 	}
 	
